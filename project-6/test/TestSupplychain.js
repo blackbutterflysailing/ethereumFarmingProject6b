@@ -249,8 +249,7 @@ contract('SupplyChain', function(accounts) {
         console.log("Account Retailer accounts[3]=",accounts[3]," balance=", balance.toNumber())
         balance = await web3.eth.getBalance(accounts[4])
         console.log("Account Consumer accounts[4]=",accounts[4]," balance=", balance.toNumber())
-        // await instance.buyStar(starId, {from: user2, value: balance});
-        await supplyChain.buyItem(upc, {from: accounts[2], value: distributerBalance})
+        await supplyChain.buyItem(upc, {from: accounts[2], value: 100})
         console.log("productPrice=", productPrice)
 
         // Retrieve the just now saved item from blockchain by calling function fetchItem()
